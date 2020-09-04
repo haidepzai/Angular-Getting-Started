@@ -9,14 +9,18 @@ import { products } from '../products';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
-  product;
+  productDetail;
               //Injector
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-      this.product = products[+params.get('productId')];
-      console.log(this.product);
+      console.log(this.productDetail); //undefined
+      this.productDetail = products[+params.get('productId')]; //nimmt die productId im URL
+      console.log(this.productDetail);
+      console.log(products); //Object products
+      console.log(products[0]);
+      console.log(products[0].name) //Phone XL
     });
   }
 
