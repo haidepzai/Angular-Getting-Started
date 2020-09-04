@@ -16,7 +16,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'z_products/:productId', component: ProductDetailsComponent }, //Route für ProductDetails
-    ])
+    ])      //z_products ist fixt; productId ist variabel
   ],
   declarations: [
     AppComponent,
