@@ -1,7 +1,9 @@
-<h2>Products</h2>
+<h2>Products</h2>                 <!--index = 0,1,2... -->
 <div *ngFor="let product of products; index as productId">
   <h3> <!-- attribute binding -->
-    <a [title]="product.name + ' details'" [routerLink]="['/z_products', productId]">{{ product.name }}</a>
+    <a [title]="product.name + ' details'" [routerLink]="['/z_products', productId]">
+    {{ product.name }}
+    </a>
   </h3>                                               <!--/z_products ist fixt; productId ist variabel -->
   <p *ngIf="product.description">
     Description: {{ product.description }}
