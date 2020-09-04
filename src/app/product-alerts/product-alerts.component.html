@@ -1,0 +1,5 @@
+<p *ngIf="produkt.price > 700">
+  <button (click)="notifyAlert.emit()">Notify Me</button>
+  <!--Verhalten muss in der Elternklasse (product-list.component.ts) implementiert werden.
+  Kind (hier) ruft das Event auf, Eltern muss reagieren -->
+</p>
